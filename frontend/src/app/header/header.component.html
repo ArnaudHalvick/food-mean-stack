@@ -1,0 +1,24 @@
+<header>
+  <div class="container">
+    <a [routerLink]="['/']" class="logo-link">Food Mine!</a>
+    <nav>
+      <ul class="nav-links">
+        <li>
+          <a [routerLink]="['/login']">Login</a>
+          <a [routerLink]="['/signup']">Sign Up</a>
+        </li>
+        <li class="menu-container">
+          <a [routerLink]="['/dashboard']" class="menu-toggle">John</a>
+          <div class="menu">
+            <a [routerLink]="['/profile']">Profile</a>
+            <a [routerLink]="['/orders']">Orders</a>
+            <a [routerLink]="['/logout']">Logout</a>
+          </div>
+        </li>
+        <li>
+          <a [routerLink]="['/cart']" class="cart-link">Cart</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

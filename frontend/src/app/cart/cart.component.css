@@ -1,0 +1,179 @@
+/* Overall Cart Container */
+.cart {
+  max-width: 70%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid rgb(134, 34, 34);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: rgb(190, 53, 53);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Empty Cart */
+.empty-cart {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+}
+
+/* Cart Header (Column Labels) */
+.cart-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #555;
+  border-bottom: 2px solid #ddd;
+  padding: 10px 0;
+  margin-bottom: 15px;
+}
+
+.header-item {
+  text-align: left;
+}
+
+.header-price {
+  text-align: left; /* Align "Price" header to the right */
+}
+
+.header-quantity {
+  text-align: center; /* Center if desired, can also be left or right */
+}
+
+.header-subtotal {
+  text-align: right; /* Align "Subtotal" header to the right */
+}
+
+/* Cart Items List */
+.cart-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Item Info (Image + Name) */
+.cart-item-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cart-item-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.cart-item-name {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Price Column - align text to the right */
+.cart-item-price {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  text-align: left; /* Align price value to the right */
+}
+
+/* Quantity + Actions */
+.cart-item-quantity-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center; /* Center these actions */
+}
+
+.cart-item-quantity-actions button {
+  background-color: rgb(190, 53, 53);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-item-quantity-actions button:hover {
+  background-color: #a02222;
+}
+
+.cart-item-quantity {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+.remove-btn {
+  background-color: #ff6b6b;
+}
+
+.remove-btn:hover {
+  background-color: #ff4b4b;
+}
+
+/* Subtotal Column - align text to the right */
+.cart-item-subtotal {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  text-align: right; /* Align subtotal value to the right */
+}
+
+/* Total Price */
+.cart-total {
+  text-align: right;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.clear-btn {
+  margin-top: 10px;
+  background-color: rgb(190, 53, 53);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+  background-color: #a02222;
+}

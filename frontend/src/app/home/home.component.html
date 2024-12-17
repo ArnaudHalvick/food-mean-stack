@@ -1,0 +1,44 @@
+<app-search></app-search>
+<app-tags [tags]="tags"></app-tags>
+
+@if (foods.length === 0) {
+<div class="not-found">
+  <p>No foods found for your search term. Try a different search!</p>
+</div>
+}
+
+<ul class="images-container">
+  @for (food of foods; track food) {
+  <li class="food-item">
+    <a class="img-anchor" [routerLink]="['/food', food.id]">
+      <img src="{{ food.imageUrl }}" alt="Food Image" />
+      <div class="content">
+        <div class="header">
+          <h3 class="name">{{ food.name }}</h3>
+          <span class="favorite">{{ food.favorite ? "❤️" : "🤍" }}</span>
+        </div>
+        <div class="rating">
+          <app-star-rating
+            [value]="food.stars"
+            [totalStars]="5"
+            [readonly]="false"
+            (rate)="onRate($event, food)"
+          ></app-star-rating>
+        </div>
+        <div class="product-item-footer">
+          <div class="origins">
+            <strong>Origin: </strong>
+            @for (origin of food.origins; track $index) {
+            <span>{{ formatOrigin(origin) }}</span>
+            @if ($index < food.origins.length - 1) {<span>, </span>} }
+          </div>
+          <div class="cook-time">
+            <span>🕒</span> {{ food.cookTime }} minutes
+          </div>
+        </div>
+        <div class="price"><strong>Price:</strong> ${{ food.price }}</div>
+      </div>
+    </a>
+  </li>
+  }
+</ul>

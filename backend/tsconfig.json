@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ES2022", // Target modern JavaScript for Node.js
+    "module": "CommonJS", // Use CommonJS module system for Node.js
+    "rootDir": "./src", // Specify the root folder for TypeScript files
+    "outDir": "./dist", // Output folder for compiled JavaScript files
+    "esModuleInterop": true, // Enable interoperability between CommonJS and ES Modules
+    "resolveJsonModule": true, // Allow importing .json files
+    "moduleResolution": "node", // Resolve modules using Node.js style
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "strict": true, // Enable all strict type-checking options
+    "sourceMap": true, // Generate source maps for debugging
+    "noImplicitReturns": true, // Ensure all functions return a value
+    "noFallthroughCasesInSwitch": true, // Disallow fallthrough cases in switch statements
+    "forceConsistentCasingInFileNames": true, // Ensure consistent file naming
+    "noUnusedLocals": true, // Report errors for unused local variables
+    "noUnusedParameters": true, // Report errors for unused parameters
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["src"], // Include all files in the "src" folder
+  "exclude": ["node_modules", "dist"] // Exclude node_modules and build output
+}
